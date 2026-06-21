@@ -251,11 +251,11 @@ func (u *UI) EntryPath(bucket, name string) string {
 	}
 
 	// Bucket prefix color:
-	//   o/ p/  → cyan     (build artifacts, packages)
-	//   h/     → blue     (cache-hash manifests)
-	//   z/     → magenta  (ZIR incremental cache)
-	//   tmp/   → yellow   (leftover from crashed runs)
-	//   other  → gray
+	//   o/ p/  -> cyan     (build artifacts, packages)
+	//   h/     -> blue     (cache-hash manifests)
+	//   z/     -> magenta  (ZIR incremental cache)
+	//   tmp/   -> yellow   (leftover from crashed runs)
+	//   other  -> gray
 	var prefixCode string
 	switch bucket {
 		case "o", "p":
@@ -282,9 +282,9 @@ func (u *UI) EntryPath(bucket, name string) string {
 
 // AgeColor colors s by how old the entry is:
 //
-//	< 1d  → green   (fresh)
-//	1–7d  → yellow  (aging)
-//	> 7d  → red     (stale)
+//	< 1d  -> green   (fresh)
+//	1–7d  -> yellow  (aging)
+//	> 7d  -> red     (stale)
 func (u *UI) AgeColor(s string, age time.Duration) string {
 	switch {
 		case age < 24*time.Hour:
