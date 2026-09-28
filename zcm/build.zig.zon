@@ -1,0 +1,13 @@
+.{
+
+    .name = .zcm,
+    .version = "0.0.45-beta.10",
+    .fingerprint = 0xdbf41115571ce346,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
